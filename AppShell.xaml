@@ -24,8 +24,8 @@
         <ShellContent ContentTemplate="{DataTemplate local:Temporisador}"/>
     </FlyoutItem>
 
-    <FlyoutItem Title="Historial" Icon="temporizador_tres.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Incio}"/>
+    <FlyoutItem Title="Historial" Icon="historial_dos.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Historial}"/>
     </FlyoutItem>
 
 

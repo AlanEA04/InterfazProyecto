@@ -8,6 +8,7 @@
             // Registro de rutas
             Routing.RegisterRoute(nameof(Incio), typeof(Incio));
             Routing.RegisterRoute(nameof(Temporisador), typeof(Temporisador));
+            Routing.RegisterRoute(nameof(Historial), typeof(Historial));
         }
 
     }
