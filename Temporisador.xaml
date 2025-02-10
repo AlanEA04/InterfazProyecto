@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InterfazProyecto.Temporisador"
+             Title="Temporizador">
+
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Botón de Menú ☰ -->
+            <Button Text="☰"
+                    FontSize="24"
+                    BackgroundColor="Transparent"
+                    Clicked="OnMenuClicked"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Margin="10"/>
+
+            <!-- Título -->
+            <Label Text="Temporizador" 
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Descripción -->
+            <Label Text="Ingresar el tiempo que va a estar encendida la bomba con el temporizador"
+                   FontSize="14"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black" />
+
+            <!-- Sección de Entrada de Tiempo -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Horas" FontSize="15" />
+                <Label Text="|" FontSize="15" />
+                <Label Text="Minutos" FontSize="15" />
+            </HorizontalStackLayout>
+
+            <!-- Picker de tiempo -->
+            <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+                <Entry x:Name="TiempoEntry"
+                       Text="00 : 00"
+                       FontSize="25"
+                       HorizontalTextAlignment="Center"
+                       WidthRequest="150"
+                       BackgroundColor="White"
+                       HeightRequest="50"
+                       Keyboard="Numeric"/>
+            </Frame>
+
+            <!-- Botón de Inicio -->
+            <Button Text="Iniciar"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="120"
+                    HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell 
+    x:Class="InterfazProyecto.AppShell"
+     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:InterfazProyecto"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.BackgroundColor="White"
+    Shell.FlyoutWidth="250"
+    FlyoutHeaderBehavior="CollapseOnScroll">
+
+    <Shell.FlyoutHeader Route="Inicio">
+        <StackLayout BackgroundColor="White" Padding="10">
+            <Image Source="dotnet_bot.png" HeightRequest="80" HorizontalOptions="Center"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+
+    <FlyoutItem Title="Inicio" Icon="inicio_uno.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Incio}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Temporisador" Icon="historial_dos.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Temporisador}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Historial" Icon="temporizador_tres.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Incio}"/>
+    </FlyoutItem>
+
+
+
+</Shell>
