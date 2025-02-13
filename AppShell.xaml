@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Shell 
+<Shell
     x:Class="InterfazProyecto.AppShell"
-     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:InterfazProyecto"
     Shell.FlyoutBehavior="Flyout"
@@ -9,25 +9,53 @@
     Shell.FlyoutWidth="250"
     FlyoutHeaderBehavior="CollapseOnScroll">
 
+    <!-- Encabezado del Menú Lateral -->
     <Shell.FlyoutHeader Route="Inicio">
-        <StackLayout BackgroundColor="White" Padding="10">
-            <Image Source="dotnet_bot.png" HeightRequest="80" HorizontalOptions="Center"/>
+        <StackLayout BackgroundColor="#82c7a5"
+                     Padding="20"
+                     Spacing="10"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+
+            <!-- Imagen de Perfil en Formato Circular -->
+            <Image Source="a.png"
+                     WidthRequest="80"
+                     HeightRequest="82"
+                     Aspect="AspectFill"
+                     HorizontalOptions="Center">
+
+                <!-- Definimos la forma de recorte como un círculo -->
+                <Image.Clip>
+                    <EllipseGeometry Center="40,40" RadiusX="40" RadiusY="40" />
+                </Image.Clip>
+
+            </Image>
+            <!-- Nombre de Usuario -->
+            <Label Text="hasbulla Magomedovich"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="White" />
+
+            <!-- Correo Electrónico -->
+            <Label Text="Magomedovich@company.com"
+                   FontSize="14"
+                   HorizontalOptions="Center"
+                   TextColor="White" />
         </StackLayout>
     </Shell.FlyoutHeader>
 
-
-    <FlyoutItem Title="Inicio" Icon="inicio_uno.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Incio}"/>
+    <!-- Ítems del Menú -->
+    <FlyoutItem Title="Inicio" Icon="casa.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Incio}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Temporisador" Icon="historial_dos.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Temporisador}"/>
+    <FlyoutItem Title="Alarmas" Icon="temporizador.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Temporisador}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Historial" Icon="historial_dos.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Historial}"/>
+    <FlyoutItem Title="Historial" Icon="historial.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Historial}" />
     </FlyoutItem>
-
-
 
 </Shell>
